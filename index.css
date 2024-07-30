@@ -1,0 +1,10 @@
+.container {
+  height: 1000px;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square-div {
+  margin: 0.1rem;
+}

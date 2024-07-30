@@ -1,9 +1,20 @@
 const divContainer = document.querySelector(".container");
 
-const squareDiv = document.createElement("div");
+for (let i = 0; i < 16; i++) {
+  let row = document.createElement("div");
+  row.classList.add("row");
+  for (let j = 0; j < 16; j++) {
+    const squareDiv = document.createElement("div");
 
-squareDiv.style.backgroundColor = "red";
-squareDiv.style.height = "50px";
-squareDiv.style.width = "50px";
+    squareDiv.style.backgroundColor = "red";
+    squareDiv.style.height = "50px";
+    squareDiv.style.width = "50px";
+    squareDiv.classList.add("square-div");
+    squareDiv.addEventListener("mouseenter", () => {
+      squareDiv.style.backgroundColor = "blue";
+    });
 
-divContainer.appendChild(squareDiv);
+    row.appendChild(squareDiv);
+  }
+  divContainer.appendChild(row);
+}
